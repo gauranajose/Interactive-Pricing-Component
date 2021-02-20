@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background: url("images/bg-pattern.svg") no-repeat right top;
+    background-size: 100% 50%;
+    background-color: #F9FAFF;
+}
+
+h1, p, h2 {
+    font-size: 1em;
+}
+
+.small {
+    font-size: 14px;
+    margin-left: 5px;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+
+.discount {
+    color: hsl(15, 100%, 70%);
+    background: hsl(14, 92%, 95%);
+    font-size: 8px;
+    padding: 2px 4px;
+    border-radius: 34px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: url("images/pattern-circles.svg") no-repeat center center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 12px;
+}
+
+.card-container {
+    width: 600px;
+    box-shadow: 0px 0px 20px 0px rgba(133, 143, 173, 0.534);
+}
+
+.card {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .top h2 {
+    color: hsl(225, 20%, 60%);
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.card .top h1 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.card .slider-container {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.card .slider-container .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 20px;
+    background: hsl(224, 65%, 95%);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card .slider-container .slider.mouseDown:hover {
+    cursor: grabbing;
+}
+
+.slider-container .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: url("images/icon-slider.svg") no-repeat center center;
+    background-color: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.card .bottom {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    color: hsl(225, 20%, 60%);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 50%, 87%);
+    -webkit-transition: 0.4s;
+    transform: 0.4s;
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #78ECDC;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #78ECDC;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.switch .slider {
+    border-radius: 34px;
+}
+
+.switch .slider:before {
+    border-radius: 50%;
+}
+
+.card .bottom p {
+    margin: 0 5px;
+}
+
+.card-footer {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    border-top: solid #F9FAFF;
+}
+
+.card-footer ul {
+    list-style: none;
+}
+
+.card-footer ul img {
+    margin-right: 10px;
+}
+
+.card-footer ul li {
+    color: hsl(225, 20%, 60%);
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.card-footer button {
+    color: #BECAF2;
+    font-size: 12px;
+    font-weight: 600;
+    outline: none;
+    padding: 12px 50px;
+    border-radius: 35px;
+    background: hsl(227, 35%, 25%);
+    border: none;
+}
+
+.card-footer button:hover {
+    cursor: pointer;
+}
+
+.card-footer button:active {
+    color: #fff;
+}
