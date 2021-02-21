@@ -57,6 +57,7 @@ header p {
 
 .card-container {
     width: 600px;
+    margin-bottom: 50px;
     box-shadow: 0px 0px 20px 0px rgba(133, 143, 173, 0.534);
 }
 
@@ -234,4 +235,46 @@ input:checked + .slider:before {
 
 .card-footer button:active {
     color: #fff;
+}
+
+@media(max-width: 650px) {
+    body {
+        height: fit-content;
+    }
+
+    header {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .card-container {
+        width: 355px;
+    }
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card .top {
+        flex-direction: column;
+    }
+
+    .card .top h1 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    .card .slider-container {
+        height: 0px;
+        padding: 0px;
+        transform: translateY(-120px);
+    }
+
+    .card-footer {
+        flex-direction: column;
+    }
+
+    .card-footer ul {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
